@@ -1,34 +1,34 @@
 <h1 align="center">
-    <img alt="Ecoleta" title="#Ecoleta" src="./assets/banner.png" />
+    <img alt="Ecoleta" title="#Threads" src="./assets/comparations.png" />
 </h1>
 
 <h1 align="center">
-   🙂 <a href="#"> Digital image processing </a>
+   👍 <a href="#"> study of threads for operating systems </a>
 </h1>
 
 <h3 align="center">
-    image processing using the OpenCV library
+    study of threads for operating systems, with image processing
 </h3>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/jhonatheberson/digital-image-processing?color=%2304D361">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/jhonatheberson/threads-SO?color=%2304D361">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/jhonatheberson/digital-image-processing">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/jhonatheberson/threads-SO">
 
   <!-- <a href="https://www.twitter.com/tgmarinho/">
     <img alt="Siga no Twitter" src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Ftgmarinho%2FREADME-ecoleta">
   </a> -->
 
-  <a href="https://github.com/jhonatheberson/easy-church/releases">
+  <a href="https://github.com/jhonatheberson/threads-SO/releases">
         <img alt="GitHub release" src="https://raster.shields.io/github/v/release/jhonatheberson/template.svg">
   </a>
-  <a href="https://github.com/jhonatheberson/digital-image-processing/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jhonatheberson/digital-image-processing">
+  <a href="https://github.com/jhonatheberson/threads-SO/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jhonatheberson/threads-SO">
   </a>
 
    <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
-   <a href="https://github.com/jhonatheberson/digital-image-processing/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/jhonatheberson/digital-image-processing?style=social">
+   <a href="https://github.com/jhonatheberson/threads-SO/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/jhonatheberson/threads-SO?style=social">
   </a>
 
   <a href="https://github.com/jhonatheberson">
@@ -59,31 +59,18 @@
 
 ## About
 
-🌌 Digital image processing - iis the study and application of image processing using [OpenCV](https://docs.opencv.org/master/index.html). with this library we will apply filters, recognize objects, count, among other things in the world of image processing.
+🌌
+Project of using thread to make the treatment of images using the procedures of Contrast enlargement and Equalization of histogram. Each thread is responsible for one of the procedures.
 
 ---
 
 ## Features
 
-- [x] Companies or entities can register on the web platform by sending:
+- [x] Contrast widening
+- [x] Histogram Equalization
+- [x] Thread creation
 
-  - [x] an image of the collection point
-  - [x] entity name, email and whatsapp
-  - [x] and the address so that it can appear on the map
-  - [x] in addition to selecting one or more collection items:
-    - lamps
-    - Batteries
-    - papers and cardboard
-    - electronic waste
-    - organic waste
-    - kitchen oil
-
-- [x] Users have access to the mobile application, where they can:
-  - [x] browse the map to see the registered institutions
-  - [x] contact the entity via E-mail or WhatsApp
-
----
-
+<!--
 ## Layout
 
 The application layout is available on Figma:
@@ -108,47 +95,49 @@ The application layout is available on Figma:
   <img alt="Ecoleta" title="#Ecoleta" src="./assets/sucesso-web.svg" width="400px">
 </p>
 
----
+--- -->
 
 ## How it works
 
 This project is divided into three parts:
 
-1. Backend (server folder)
-2. Frontend (web folder)
-3. Mobile (mobile folder)
+1. Histogram Equalization (equalization.py)
+2. Contrast enlargement (enlargement.py)
+3. Threads (threads.py)
 
-Both Frontend and Mobile need the Backend to be running to work.
+run the threads.py file to start.
 
 ### Pre-requisites
 
 Before you begin, you will need to have the following tools installed on your machine:
-[Git] (https://git-scm.com), [Node.js] (https://nodejs.org/en/).
+[Git](https://git-scm.com), [Opencv](https://opencv.org/), [NumPy](https://numpy.org/), [Matplot](https://matplotlib.org/).
 In addition, it is good to have an editor to work with the code like [VSCode] (https://code.visualstudio.com/)
 
-#### Rodando o Backend (servidor)
+#### Rodando
 
 ```bash
 
 # Clone this repository
-$ git clone git@github.com:tgmarinho/README-ecoleta.git
+$ git clone git@github.com:jhonatheberson/threads-SO.git
 
-# Access the project folder cmd/terminal
-$ cd README-ecoleta
+# creating an environment
+$ conda create -n py37env python=3.7
 
-# go to the server folder
-$ cd server
+#activating environment
+$ python conda activate py37env
 
 # install the dependencies
-$ npm install
+$ conda env install -f libs.yml
+
+# update the dependencies
+$ conda env update -f libs.yml
 
 # Run the application in development mode
-$ npm run dev:server
-
-# The server will start at port: 3333 - go to http://localhost:3333
+$ python equalization.py
 
 ```
 
+<!--
 <p align="center">
   <a href="https://github.com/tgmarinho/README-ecoleta/blob/master/Insomnia_API_Ecoletajson.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
 </p>
@@ -174,13 +163,22 @@ $ npm run start
 
 # The application will open on the port: 3000 - go to http://localhost:3000
 
-```
+``` -->
 
 ---
 
 ## Tech Stack
 
 The following tools were used in the construction of the project:
+
+**thread** ([python](https://www.python.org/))
+
+- **[OpenCV](https://opencv.org/)**
+- **[Anaconda](https://www.anaconda.com/)**
+- **[Tensorflow](https://www.tensorflow.org/learn?hl=pt-br)**
+- **[matplotlib](https://matplotlib.org/)**
+- **[scipy](https://www.scipy.org/)**
+- **[sciki-learn](https://scikit-learn.org/stable/)** -**[threading](https://docs.python.org/3/library/threading.html)**
 
 <!-- #### **Website** ([React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/))
 
@@ -241,16 +239,16 @@ A big thanks to this group that made this product leave the field of idea and en
 
 You are an awesome team! :)
 
-<!--
 <table>
   <tr>
-    <td align="center"><a href="https://rocketseat.com.br"><img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/2254731?s=400&u=0ba16a79456c2f250e7579cb388fa18c5c2d7d65&v=4" width="100px;" alt=""/><br /><sub><b>Diego Fernandes</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat"></a></td>
-    <td align="center"><a href="https://rocketseat.com.br"><img style="border-radius: 50%;" src="https://avatars1.githubusercontent.com/u/4669899?s=460&u=806503605676192b5d0c363e4490e13d8127ed64&v=4" width="100px;" alt=""/><br /><sub><b>Cleiton Souza</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat"></a></td>
-    <td align="center"><a href="https://rocketseat.com.br"><img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/861751?s=460&v=4" width="100px;" alt=""/><br /><sub><b>Robson Marques</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat"></a></td>
+    <td align="center"><a href="https://github.com/Diegooliver2"><img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/42583983?s=460&u=719cbbcd7d7088b686bb59673d00b34b9be6e8ee&v=4" width="100px;" alt=""/><br /><sub><b>Diego de Oliveira</b></sub></a><br /><a href="https://github.com/Diegooliver2" title="Diego"></a></td>
+    <td align="center"><a href="https://github.com/angelolmg"><img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/22107722?s=460&v=4" width="100px;" alt=""/><br /><sub><b>Angelo Leite</b></sub></a><br /><a href="https://github.com/angelolmg" title="Angelo"></a></td>
+     <td align="center"><a href="https://github.com/Fagner94"><img style="border-radius: 50%;" src="https://avatars1.githubusercontent.com/u/26416521?s=460&v=4" width="100px;" alt=""/><br /><sub><b>Fagner94</b></sub></a><br /><a href="https://github.com/Fagner94" title="Fagner94"></a></td>
+     <!--
     <td align="center"><a href="https://rocketseat.com.br"><img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/16831337?s=460&v=4" width="100px;" alt=""/><br /><sub><b>Claudio Orlandi</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat"></a></td>
     <td align="center"><a href="https://rocketseat.com.br"><img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/37725197?s=460&u=446439436524c37f66e41f35b607dbb70358d5e4&v=4" width="100px;" alt=""/><br /><sub><b>Vinícios Fraga</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat"></a></td>
-    <td align="center"><a href="https://rocketseat.com.br"><img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/26551306?s=460&u=18446655ccae6c2a29eb177a104ecf32f029aa3a&v=4" width="100px;" alt=""/><br /><sub><b>Hugo Duarte</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat"></a>  <a href="https://blog.rocketseat.com.br/" title="Blog">🌐</a></td>
-
+    <td align="center"><a href="https://rocketseat.com.br"><img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/26551306?s=460&u=18446655ccae6c2a29eb177a104ecf32f029aa3a&v=4" width="100px;" alt=""/><br /><sub><b>Hugo Duarte</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat"></a>  <a href="https://blog.rocketseat.com.br/" title="Blog">🌐</a></td> -->
+<!-- 
   </tr>
   <tr>
     <td align="center"><a href="https://rocketseat.com.br"><img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/39345247?s=460&u=cdff2624a327a43e2765112a54e966a06eac6d79&v=4" width="100px;" alt=""/><br /><sub><b>Joseph Oliveira</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat"></a></td>
@@ -258,10 +256,10 @@ You are an awesome team! :)
     <td align="center"><a href="https://rocketseat.com.br"><img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/6643122?s=460&u=1e9e1f04b76fb5374e6a041f5e41dce83f3b5d92&v=4" width="100px;" alt=""/><br /><sub><b>Mayk Brito</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat"></a></td>
     <td align="center"><a href="https://rocketseat.com.br"><img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/7268910?s=460&u=0b5d9df4232e70fa66ea9f130fad4260378323de&v=4" width="100px;" alt=""/><br /><sub><b>João Paulo</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat"></a></td>
     <td align="center"><a href="https://rocketseat.com.br"><img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/14251143?s=460&u=340ed1d854bbacc22b9a3210a18a1f589a28bc40&v=4" width="100px;" alt=""/><br /><sub><b>Luke Morales</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat"></a></td>
-     <td align="center"><a href="https://rocketseat.com.br"><img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/5151405?s=460&u=1dbcf0e89087c2dc902d3331b90e532db1543d2b&v=4" width="100px;" alt=""/><br /><sub><b>Luiz Batanero</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat"></a></td>
+     <td align="center"><a href="https://rocketseat.com.br"><img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/5151405?s=460&u=1dbcf0e89087c2dc902d3331b90e532db1543d2b&v=4" width="100px;" alt=""/><br /><sub><b>Luiz Batanero</b></sub></a><br /><a href="https://rocketseat.com.br/" title="Rocketseat"></a></td> -->
 
   </tr>
-</table> -->
+</table>
 
 ## How to contribute
 
