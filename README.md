@@ -1,5 +1,6 @@
 <h1 align="center">
     <img alt="Ecoleta" title="#Threads" src="./assets/comparations.png" />
+    <img alt="Ecoleta" title="#Threads" src="./assets/comparations_alarg.png" />
 </h1>
 
 <h1 align="center">
@@ -41,8 +42,8 @@
 </p>
 
 <h4 align="center"> 
-	 Status: development
-    <!-- Status: Finished -->
+	 <!-- Status: development -->
+    Status: Finished
 </h4>
 
 <p align="center">
@@ -66,9 +67,9 @@ Project of using thread to make the treatment of images using the procedures of 
 
 ## Features
 
-- [x] Contrast widening
-- [x] Histogram Equalization
-- [x] Thread creation
+- [x] Contrast widening [Enlargement](https://github.com/jhonatheberson/threads-SO/blob/master/enlargement.py)
+- [x] Histogram Equalization [Equalization](https://github.com/jhonatheberson/threads-SO/blob/master/equalization.py)
+- [x] Thread creation [threads](https://github.com/jhonatheberson/threads-SO/blob/master/threads.py)
 
 <!--
 ## Layout

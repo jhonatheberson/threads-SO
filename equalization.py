@@ -47,7 +47,7 @@ def equalization():
   # plt.subplot(232),plt.imshow(img_modify, 'gray'),plt.title('Equalização de Histograma')
 
   # plt.show()
-  cv.imwrite("assets/equalizarion.png", img) #save picture
+  cv.imwrite("assets/equalizarion.png", img_modify) #save picture
 
 
 if __name__ == "__main__":
